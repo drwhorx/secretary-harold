@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script>var socket = io('http://localhost:8080');</script>
+    <script type="text/javascript" src="js/visuals.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="menu">
+        <div id="mainlogo"></div>
+        <div id="new" onclick="newgame()">NEW GAME</div>
+        <div id="join" onclick="joingame()">JOIN GAME</div>
+    </div>
+    <div id="newgame" hidden>
+        <div id="name">CHOOSE A NAME</div>
+        <div class="inputwrap" id="nameinputwrap">
+            <input id="nameinput" type="text">
+        </div>
+        <div id="newbutton" onclick="newbutton()">ENTER</div>
+    </div>
+    <div id="joingame" hidden>
+        <div id="room">ENTER ROOM CODE</div>
+        <div class="inputwrap" id="roominputwrap">
+            <input id="roominput" type="text">
+        </div>
+        <div id="name_join">CHOOSE A NAME</div>
+        <div class="inputwrap" id="nameinput_joinwrap">
+            <input id="nameinput_join" type="text">
+        </div>
+        <div id="joinbutton" onclick="joinbutton()">ENTER</div>
+    </div>
+    <div id="lobby" hidden>
+        <div id="master">WAITING FOR GAME MASTER TO BEGIN...</div>
+        <div id="joined">
+            <div id="joinedcontain">
+                <div id="joined1" class="player card">
+                    <div class="name">YOU</div>
+                </div>
+                <div id="joined2" class="player card" hidden>
+                    <div class="name"></div>
+                </div>
+                <div id="joined3" class="player card" hidden>
+                    <div class="name"></div>
+                </div>
+                <div id="joined4" class="player card" hidden>
+                    <div class="name"></div>
+                </div>
+                <div id="joined5" class="player card" hidden>
+                    <div class="name"></div>
+                </div>
+                <div id="joined6" class="player card" hidden>
+                    <div class="name"></div>
+                </div>
+                <div id="joined7" class="player card" hidden>
+                    <div class="name"></div>
+                </div>
+                <div id="joined8" class="player card" hidden>
+                    <div class="name"></div>
+                </div>
+                <div id="joined9" class="player card" hidden>
+                    <div class="name"></div>
+                </div>
+                <div id="joined10" class="player card" hidden>
+                    <div class="name"></div>
+                </div>
+            </div>
+        </div>
+        <div id="begin" onclick="socket.emit('begin')" hidden>BEGIN</div>
+    </div>
+    <div id="board" hidden>
+        <div id="logo"></div>
+        <div id="players">
+            <div id="playercontain">
+                <div id="player1" class="player card">
+                    <div class="name">YOU</div>
+                    <div class="playervote" hidden></div>
+                </div>
+                <div id="player2" class="player card" hidden>
+                    <div class="name"></div>
+                    <div class="playermenu" hidden>
+                        <div class="action" hidden></div>
+                    </div>
+                    <div class="playervote" hidden></div>
+                </div>
+                <div id="player3" class="player card" hidden>
+                    <div class="name"></div>
+                    <div class="playermenu" hidden>
+                        <div class="action" hidden></div>
+                    </div>
+                    <div class="playervote" hidden></div>
+                </div>
+                <div id="player4" class="player card" hidden>
+                    <div class="name"></div>
+                    <div class="playermenu" hidden>
+                        <div class="action" hidden></div>
+                    </div>
+                    <div class="playervote" hidden></div>
+                </div>
+                <div id="player5" class="player card" hidden>
+                    <div class="name"></div>
+                    <div class="playermenu" hidden>
+                        <div class="action" hidden></div>
+                    </div>
+                    <div class="playervote" hidden></div>
+                </div>
+                <div id="player6" class="player card" hidden>
+                    <div class="name"></div>
+                    <div class="playermenu" hidden>
+                        <div class="action" hidden></div>
+                    </div>
+                    <div class="playervote" hidden></div>
+                </div>
+                <div id="player7" class="player card" hidden>
+                    <div class="name"></div>
+                    <div class="playermenu" hidden>
+                        <div class="action" hidden></div>
+                    </div>
+                    <div class="playervote" hidden></div>
+                </div>
+                <div id="player8" class="player card" hidden>
+                    <div class="name"></div>
+                    <div class="playermenu" hidden>
+                        <div class="action" hidden></div>
+                    </div>
+                    <div class="playervote" hidden></div>
+                </div>
+                <div id="player9" class="player card" hidden>
+                    <div class="name"></div>
+                    <div class="playermenu" hidden>
+                        <div class="action" hidden></div>
+                    </div>
+                    <div class="playervote" hidden></div>
+                </div>
+                <div id="player10" class="player card" hidden>
+                    <div class="name"></div>
+                    <div class="playermenu" hidden>
+                        <div class="action" hidden></div>
+                    </div>
+                    <div class="playervote" hidden></div>
+                </div>
+            </div>
+        </div>
+        <div id="messages"></div>
+        <div id="label"></div>
+        <div id="liberal">
+            <ul id="libcontain">
+                <li id="libcard1" class="libblank"></li>
+                <li id="libcard2" class="libblank"></li>
+                <li id="libcard3" class="libblank"></li>
+                <li id="libcard4" class="libblank"></li>
+                <li id="libcard5"></li>
+            </ul>
+            <ul id="tracker">
+                <li id="fail1"></li>
+                <li id="fail2"></li>
+                <li id="fail3"></li>
+                <li id="fail4"></li>
+            </ul>
+        </div>
+        <div id="fascist">
+            <ul id="fasccontain">
+                <li id="fasccard1"></li>
+                <li id="fasccard2"></li>
+                <li id="fasccard3"></li>
+                <li id="fasccard4"></li>
+                <li id="fasccard5"></li>
+                <li id="fasccard6"></li>
+            </ul>
+        </div>
+        <div id="select">
+            <div id="cardcontain">
+                <div id="ja" class="card ja" onclick="ja()" hidden></div>
+                <div id="nein" class="card nein" onclick="nein()" hidden></div>
+                <div id="pres1" class="card" onclick="discard_popup(this)" hidden></div>
+                <div id="pres2" class="card" onclick="discard_popup(this)" hidden></div>
+                <div id="pres3" class="card" onclick="discard_popup(this)" hidden></div>
+                <div id="chanc1" class="card" onclick="enact_popup(this)" hidden></div>
+                <div id="chanc2" class="card" onclick="enact_popup(this)" hidden></div>
+            </div>
+            <div id="submit" onclick="submit()" hidden>SUBMIT!</div>
+        </div>
+    </div>
+</body>
+
+</html>

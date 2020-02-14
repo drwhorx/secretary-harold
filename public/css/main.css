@@ -1,0 +1,520 @@
+:root {
+    --dark-orange: #C36462;
+    --orange: #F2654B;
+    --light-orange: #F8AD8F;
+    --gray: #434243;
+    --dark-blue: #6794BD;
+    --brown: #A56F57;
+    --yellow: #FFC556;
+}
+div, li {
+    font-family: "hitler";
+    background-color: #F8AD8F;
+}
+html {
+    background-color: #F2654B;
+}
+#board, #menu, #lobby, #newgame, #joingame {
+    position: relative;
+    width: 200vh;
+    height: 97vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F2654B
+}
+#mainlogo {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 5%;
+    width: 15%;
+    height: 21%;
+    background-image: url("assets/logo.png");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+#new, #join, #name, #room, #name_join, #newbutton, #joinbutton {
+    width: 30%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-color: #6794BD;
+    text-align: center;
+    color: white;
+    line-height: 9vh;
+    font-size: 9vh;
+}
+#newbutton, #joinbutton, #begin {
+    background-color: green;
+}
+#new {
+    top: 10%;
+}
+#join {
+    top: 15%;
+}
+#nameinput, #roominput, #nameinput_join {
+    line-height: 100%;
+    font-size: 90%;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+.inputwrap {
+    width: 30%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#name {
+    width: 50%;
+    top: 10%;
+}
+#nameinputwrap {
+    top: 15%;
+}
+#newbutton {
+    top: 20%;
+}
+#room {
+    width: 50%;
+    top: 10%;
+}
+#roominputwrap {
+    top: 15%;
+}
+#name_join {
+    width: 50%;
+    top: 20%;
+}
+#nameinput_joinwrap {
+    top: 25%;
+}
+#joinbutton {
+    top: 30%;
+}
+#master {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 5%;
+    width: 100%;
+    height: 10%;
+    background-color: #6794BD;
+    text-align: center;
+    color: white;
+    line-height: 9vh;
+    font-size: 9vh;
+}
+#joined {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: justify;
+    top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 21%;
+}
+#joinedcontain {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: justify;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+}
+#begin {
+    width: 30%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 60%;
+    text-align: center;
+    color: white;
+    line-height: 9vh;
+    font-size: 9vh;
+    background-color: green;
+}
+#label {
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    position: absolute;
+    bottom: 28%;
+    left: 1%;
+    width: 46%;
+    height: 15%;
+}
+#label[auth="chanc"] {
+    background-image: url("assets/chanc.JPG");
+}
+#label[auth="pres"] {
+    background-image: url("assets/pres.JPG")
+}
+#players {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    text-align: justify;
+    top: 2%;
+    right: 1%;
+    width: 80%;
+    height: 21%;
+}
+.player {
+    background-image: url("assets/party.JPG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    vertical-align: middle;
+    background-color: transparent;
+    height: 100%;
+    width: 9%;
+}
+.name {
+    position: relative;
+    top: 82%;
+    border: 0;
+    background-color: #FFC556;
+    width: 100%;
+    height: 18%;
+    line-height: 3vh;
+    font-size: 3vh;
+    color: black;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: clip;
+}
+#playercontain {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: justify;
+    height: 90%;
+    width: 90%;
+    left: 5%;
+    top: 5%;
+}
+.playermenu {
+    z-index: 99;
+    width: 150%;
+    left: -25%;
+    border: 2px grey solid;
+    height: 4vh;
+    background-color: #6794BD;
+    position: relative;
+    top: 80%;
+}
+.playervote {
+    z-index: 99;
+    width: 100%;
+    height: 70%;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    position: relative;
+    top: 80%;
+}
+.fascparty {
+    background-image: url("assets/fascparty.JPG");
+}
+.fascrole {
+    background-image: url("assets/fascrole.JPG");
+}
+.libparty {
+    background-image: url("assets/libparty.JPG");
+}
+.librole {
+    background-image: url("assets/librole.JPG");
+}
+.hitrole {
+    background-image: url("assets/hitrole.JPG");
+}
+.action {
+    position: absolute;
+    height: 4vh;
+    width: 100%;
+    background-color: red;
+    line-height: 4vh;
+    font-size: 3vh;
+    text-align: center;
+    color: white;
+}
+#logo {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    width: 15%;
+    height: 21%;
+    background-image: url("assets/logo.png");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+#liberal {
+    position: absolute;
+    background-image: url("assets/libboard.JPG");
+    background-color: #6794BD;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    top: 25%;
+    right: 1%;
+    width: 51%;
+    height: 35%;
+}
+#fascist {
+    position: absolute;
+    background-image: url("assets/fascboard.JPG");
+    background-color: #C36462;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    bottom: 2%;
+    right: 1%;
+    width: 51%;
+    height: 35%;
+}
+#messages {
+    position: absolute;
+    top: 25%;
+    left: 1%;
+    width: 46%;
+    height: 10%;
+    color: white;
+    text-align: center;
+    font-size: 4vh;
+    line-height: 4vh;
+}
+.left {
+    text-align: left !important;
+}
+#select {
+    position: absolute;
+    bottom: 2%;
+    left: 1%;
+    width: 46%;
+    height: 25%;
+}
+.card {
+    vertical-align: middle;
+    display: inline-block;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+.card[hidden=""] {
+    display: none;
+}
+#cardcontain {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: justify;
+    left: 5%;
+    top: 5%;
+    height: 90%;
+    width: 60%;
+}
+#pres1, #pres2, #pres3, #chanc1, #chanc2 {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: transparent;
+    height: 100%;
+    width: 30%;
+}
+#cardcontain div[policy="1"] {
+    background-image: url("assets/libpolicy.JPG");
+}
+#cardcontain div[policy="0"] {
+    background-image: url("assets/fascpolicy.JPG");
+}
+#cardcontain div[hidden=""] {
+    display: none;
+}
+#libcontain {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: justify;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    left: 15%;
+    width: 70%;
+    height: 60%;
+    top: 20%;
+    font-family: "hitler";
+}
+#libcontain li {
+    width: 16%;
+    border: 0;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: transparent;
+}
+#libcontain li[hidden=""] {
+    display: none;
+}
+#tracker {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: justify;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    left: 31.5%;
+    width: 35%;
+    height: 15%;
+    top: 21%;
+    font-family: "hitler";
+}
+#tracker li {
+    width: 15%;
+    border: 0;
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 50%;
+}
+#tracker li[hidden=""] {
+    display: none;
+}
+.failed {
+    background-color: #6794BD !important;
+}
+.libblank {
+    background-image: url("assets/libblank.JPG")
+}
+.libpolicy {
+    background-image: url("assets/libpolicy.JPG");
+}
+#fasccontain {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    text-align: justify;
+    padding: 0;
+    border: 0 !important;
+    margin: 0;
+    left: 8%;
+    width: 84%;
+    height: 60%;
+    top: 20%;
+    font-family: "hitler";
+}
+#fasccontain li {
+    width: 12%;
+    border: 0;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: transparent;
+}
+#fasccontain li[hidden=""] {
+    display: none;
+}
+.fascblank {
+    background-image: url("assets/fascblank.JPG");
+}
+.fascpolicy {
+    background-image: url("assets/fascpolicy.JPG");
+}
+.inspect {
+    background-image: url("assets/fascinspect.JPG");
+}
+.top3 {
+    background-image: url("assets/fasctop3.JPG");
+}
+.nextpres {
+    background-image: url("assets/fascnextpres.JPG");
+}
+#ja, #nein {
+    height: 100%;
+    width: 48%;
+}
+.ja {
+    background-image: url("assets/ja.JPG");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+.nein {
+    background-image: url("assets/nein.JPG");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+.popup {
+    top: -5%;
+    position: relative;
+}
+#submit {
+    font-family: "hitler";
+    text-align: center;
+    font-size: 4vh;
+    line-height: 5vh;
+    color: white;
+    position: absolute;
+    height: 5vh;
+    right: 2%;
+    top: 40%;
+    width: 25%;
+    background-color: green;
+}
+@font-face {
+    font-family: 'hitler';
+    src: url('./fonts/hitler.woff2') format('woff2'),
+         url('./fonts/hitler.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ubuntu';
+    src: url('./fonts/ubuntu.woff2') format('woff2'),
+         url('./fonts/ubuntu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
